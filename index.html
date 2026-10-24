@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#050505">
+<title>黄昊轩 · 作品集</title>
+<meta name="description" content="黄昊轩的作品集：国风空间解谜《画中洞天》、2D Roguelike《Astro Bot》、类《杀戮尖塔》卡牌游戏。">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+:root{--black:#050505;--panel:#0b0b0b;--white:#f4f4f2;--gray:#a3a3a3;--muted:#6f6f6f;--red:#e01b2e;--red-dark:#b51220;--line:#242424;--serif:"STZhongsong","Songti SC","Noto Serif SC","SimSun",serif;--sans:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--black)}body{margin:0;background:var(--black);color:var(--white);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--red);color:#fff}a{color:inherit;text-decoration:none}img,video{display:block;max-width:100%}button{font:inherit}:focus-visible{outline:2px solid var(--red);outline-offset:4px}
+.scroll-progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:120;pointer-events:none}.scroll-progress span{display:block;height:100%;background:var(--red);transform:scaleX(0);transform-origin:0 50%}
+.site-head{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px clamp(20px,4vw,52px);border-bottom:1px solid transparent;transition:background .3s,border-color .3s}.site-head.is-scrolled{background:rgba(5,5,5,.94);border-color:var(--line)}
+.brand{display:flex;align-items:center;gap:12px;flex:0 0 auto}.seal{width:31px;height:31px;display:grid;place-items:center;background:var(--red);color:#fff;font-family:var(--serif);font-size:17px;line-height:1}.brand-text{display:flex;flex-direction:column;gap:3px;font-size:12px;letter-spacing:.18em;line-height:1}.brand-text small{color:var(--muted);font-size:7.5px;letter-spacing:.3em}
+.nav{display:flex;align-items:center;gap:clamp(16px,2.4vw,32px);font-size:10px;letter-spacing:.18em;color:var(--gray)}.nav a{position:relative;padding:6px 0;transition:color .25s}.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--red);transform:scaleX(0);transform-origin:0 50%;transition:transform .3s}.nav a:hover,.nav a.is-active{color:var(--white)}.nav a:hover::after,.nav a.is-active::after{transform:scaleX(1)}
+.hero{display:flex;align-items:center;min-height:100vh;min-height:100svh;padding:128px clamp(22px,6vw,84px) 60px;border-bottom:1px solid var(--line)}
+.hero-main{position:relative;width:min(1180px,100%);margin:0 auto}
+.hero-main::before{content:"";display:block;width:64px;height:4px;background:var(--red);margin-bottom:28px}
+.eyebrow{display:flex;align-items:center;gap:13px;margin:0 0 22px;color:var(--gray);font-size:9px;letter-spacing:.2em}.eyebrow::before{content:"";width:24px;height:1px;background:var(--red)}
+.hero h1{margin:0 0 26px;font-family:var(--serif);font-size:clamp(5.2rem,15vw,13rem);font-weight:500;line-height:.9;letter-spacing:-.06em}.hero h1 span{color:var(--red)}
+.hero-lede{max-width:32em;margin:0 0 30px;color:var(--gray);font-size:clamp(1rem,1.45vw,1.2rem);line-height:1.95;letter-spacing:.035em}
+.hero-meta{display:flex;flex-wrap:wrap;gap:11px 24px;color:var(--muted);font-size:9px;letter-spacing:.1em}.hero-meta span{display:inline-flex;align-items:center;gap:9px}.hero-meta span::before{content:"";width:12px;height:1px;background:var(--red)}
+.hero-index{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));max-width:930px;margin-top:38px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.hero-index a{display:flex;flex-direction:column;gap:4px;padding:14px 14px 14px 0;border-right:1px solid var(--line);transition:background .2s}
+.hero-index a:nth-child(2){padding-left:14px}
+.hero-index a:nth-child(3){padding-left:14px;border-right:0}
+.hero-index a:hover{background:rgba(224,27,46,.08)}
+.hero-index span{color:var(--red);font-family:var(--serif);font-size:9px}
+.hero-index strong{color:var(--white);font-size:11px;font-weight:500;letter-spacing:.04em}
+.hero-index em{color:var(--muted);font-size:8px;font-style:normal;letter-spacing:.07em}
+.wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
+.project{padding:clamp(68px,9.5vw,118px) 0;border-bottom:1px solid var(--line);background:var(--black)}.project--tint{background:var(--panel)}
+.section-head{display:flex;align-items:center;gap:14px;margin-bottom:clamp(26px,3.8vw,38px)}.section-head .num{color:var(--red);font-family:var(--serif);font-size:12px;letter-spacing:.1em}.section-head .kicker{color:var(--muted);font-size:8px;letter-spacing:.3em;text-transform:uppercase}.section-head .rule{flex:1;height:1px;background:var(--line)}
+.title-row{display:flex;align-items:flex-end;justify-content:space-between;gap:clamp(26px,5vw,64px);margin-bottom:clamp(26px,4vw,42px)}.title-row h2{margin:0;font-family:var(--serif);font-size:clamp(2.5rem,5.2vw,4.8rem);font-weight:500;line-height:1.04;letter-spacing:-.045em}.subtitle{margin:13px 0 0;color:var(--gray);font-size:clamp(.8rem,1.1vw,.96rem);line-height:1.7;letter-spacing:.06em}.title-en{flex:0 0 auto;color:var(--muted);font-size:8px;line-height:1.9;letter-spacing:.24em;text-align:right;text-transform:uppercase;white-space:nowrap}
+.player{position:relative;aspect-ratio:16/9;overflow:hidden;border:1px solid var(--line);background:#000}.player video{width:100%;height:100%;object-fit:contain;background:#000}.player-overlay{position:absolute;inset:0;display:grid;place-items:center;width:100%;padding:0;border:0;color:#fff;background:rgba(0,0,0,.32);cursor:pointer;transition:opacity .35s,visibility .35s}.player-overlay:hover .play-orb{background:var(--red);border-color:var(--red);transform:scale(1.05)}
+.play-orb{width:clamp(62px,7vw,84px);height:clamp(62px,7vw,84px);display:grid;place-items:center;border:1px solid rgba(255,255,255,.65);border-radius:50%;background:rgba(5,5,5,.55);transition:background .3s,border-color .3s,transform .3s}.play-orb::after{content:"";width:0;height:0;margin-left:4px;border-top:8px solid transparent;border-bottom:8px solid transparent;border-left:13px solid #fff}
+.player-caption{position:absolute;left:clamp(16px,3vw,30px);bottom:clamp(14px,2.4vw,25px);display:flex;align-items:baseline;gap:12px;text-align:left}.player-caption strong{font-size:11px;font-weight:500;letter-spacing:.16em}.player-caption span{color:rgba(255,255,255,.6);font-size:9px;letter-spacing:.16em}.player-tag{position:absolute;top:clamp(14px,2.3vw,24px);right:clamp(16px,3vw,30px);color:rgba(255,255,255,.65);font-size:8px;letter-spacing:.22em;text-transform:uppercase;transition:opacity .25s}
+.player.is-playing .player-overlay{opacity:0;visibility:hidden;pointer-events:none}.player.is-playing .player-tag{opacity:0}.player.is-loading .player-overlay{pointer-events:none;background:rgba(0,0,0,.68)}.player.is-loading .play-orb{border:2px solid rgba(255,255,255,.22);border-top-color:#fff;background:transparent;animation:playerSpin .9s linear infinite}.player.is-loading .play-orb::after{display:none}@keyframes playerSpin{to{transform:rotate(360deg)}}.player.is-error .player-overlay{opacity:1;visibility:visible;pointer-events:auto}.player.is-error .player-caption strong{color:var(--red)}
+.project-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(250px,.8fr);gap:clamp(28px,5.5vw,72px);margin-top:clamp(28px,4vw,44px)}.desc p{max-width:43em;margin:0 0 14px;color:var(--gray);font-size:.92rem;line-height:2;letter-spacing:.02em}.desc p:last-child{margin-bottom:0}.desc strong{color:var(--white);font-weight:500}.facts{display:grid;grid-template-columns:1fr 1fr;gap:19px 22px;align-content:start;margin:0;padding-top:18px;border-top:1px solid var(--line)}.fact dt{margin:0 0 7px;color:var(--muted);font-size:7.5px;letter-spacing:.22em;text-transform:uppercase}.fact dd{margin:0;color:var(--white);font-size:11px;line-height:1.7;letter-spacing:.03em}
+.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.8vw,32px);margin-top:clamp(38px,4.8vw,54px);padding-top:24px;border-top:1px solid var(--line)}.note{display:grid;grid-template-columns:auto 1fr;gap:13px}.note-num{padding-top:2px;color:var(--red);font-family:var(--serif);font-size:11px;letter-spacing:.08em}.note h3{margin:0 0 7px;font-family:var(--serif);font-size:1rem;font-weight:500;letter-spacing:.04em}.note p{margin:0;color:var(--muted);font-size:.78rem;line-height:1.85;letter-spacing:.02em}
+.credits{display:flex;flex-wrap:wrap;align-items:center;gap:10px 26px;margin-top:30px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:9px;letter-spacing:.09em}.credits-label{color:var(--red);font-size:7.5px;letter-spacing:.22em;text-transform:uppercase}.credits span b{color:var(--gray);font-weight:400;margin-right:5px}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:clamp(26px,3.8vw,38px)}.gallery figure{margin:0;overflow:hidden}.gallery-img{overflow:hidden;background:#141414}.gallery img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}.gallery figure:hover img{transform:scale(1.03)}.gallery figcaption{display:flex;justify-content:space-between;gap:16px;padding-top:8px;color:var(--muted);font-size:8px;line-height:1.6;letter-spacing:.09em}.gallery figcaption span:last-child{color:#4a4a4a;font-family:var(--serif)}
+.pull-quote{margin:clamp(28px,3.8vw,40px) 0 0;padding:clamp(20px,3vw,28px) 0 clamp(20px,3vw,28px) clamp(18px,3vw,28px);border-left:3px solid var(--red);color:var(--gray);font-family:var(--serif);font-size:clamp(1.05rem,1.75vw,1.4rem);line-height:1.9;letter-spacing:.03em}.pull-quote em{color:var(--red);font-style:normal}
+.raw-link{display:inline-flex;align-items:center;gap:7px;margin-top:17px;color:var(--muted);font-size:8px;letter-spacing:.16em;text-transform:uppercase;transition:color .2s}.raw-link:hover{color:var(--white)}.raw-link::after{content:"↗";color:var(--red)}
+.about{padding:clamp(72px,9.5vw,118px) 0 42px;background:var(--black);border-top:1px solid var(--red)}.about-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);gap:clamp(32px,6.5vw,84px);align-items:start}.about .section-head{margin-bottom:22px}.about h2{margin:0 0 20px;font-family:var(--serif);font-size:clamp(2rem,3.9vw,3.5rem);font-weight:500;line-height:1.22;letter-spacing:-.035em}.about h2 span{color:var(--red)}.about p{max-width:40em;margin:0 0 13px;color:var(--gray);font-size:.9rem;line-height:2}.about-aside{padding-top:34px;border-top:1px solid var(--line)}.about-list{margin:0;padding:0;list-style:none}.about-list li{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid var(--line);color:var(--muted);font-size:9px;letter-spacing:.09em}.about-list li span:last-child{color:var(--gray);text-align:right}.about-note{margin:22px 0 0;color:var(--muted);font-size:8px;line-height:1.9;letter-spacing:.08em}
+.footer{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:clamp(48px,7vw,76px);padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:8px;letter-spacing:.12em}.footer a{transition:color .2s}.footer a:hover{color:var(--white)}
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1)}.js .reveal.is-visible{opacity:1;transform:none}.hero .eyebrow,.hero h1,.hero-lede,.hero-meta,.hero-index{animation:heroIn .85s cubic-bezier(.2,.7,.2,1) both}.hero .eyebrow{animation-delay:.08s}.hero h1{animation-delay:.16s}.hero-lede{animation-delay:.28s}.hero-meta{animation-delay:.38s}.hero-index{animation-delay:.46s}@keyframes heroIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@media(max-width:900px){.project-grid,.about-grid{grid-template-columns:1fr}.facts{max-width:440px}.notes{grid-template-columns:1fr;gap:18px}.note{grid-template-columns:32px 1fr}.title-en{display:none}.hero{min-height:auto;padding:108px 24px 48px}.hero-main{max-width:none}}
+@media(max-width:680px){.site-head{padding:15px 18px}.seal{width:28px;height:28px;font-size:15px}.brand-text{font-size:11px}.brand-text small{font-size:6.5px}.nav{gap:14px;font-size:8.5px}.nav a:nth-child(2),.nav a:nth-child(3){display:none}.hero{padding:100px 20px 40px}.hero-main::before{width:38px;margin-bottom:20px}.hero h1{font-size:clamp(4rem,20vw,5rem)}.hero-lede{max-width:23em;font-size:.9rem}.hero-meta{display:grid;gap:9px}.hero-index{grid-template-columns:1fr;margin-top:24px}.hero-index a,.hero-index a:nth-child(2),.hero-index a:nth-child(3){flex-direction:row;align-items:baseline;gap:10px;padding:10px 0;border-right:0;border-bottom:1px solid var(--line)}.hero-index a:last-child{border-bottom:0}.wrap{width:calc(100% - 36px)}.title-row{display:block}.subtitle{font-size:.8rem}.player{aspect-ratio:16/10}.player-caption{gap:8px}.player-caption strong{font-size:10px}.player-caption span{font-size:8px}.project-grid{gap:24px}.desc p{font-size:.86rem;line-height:1.95}.gallery{grid-template-columns:1fr}.gallery figcaption{font-size:7.5px}.about-aside{padding-top:4px}.footer{align-items:flex-start;flex-direction:column;gap:9px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.js .reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+<header class="site-head" id="site-head">
+  <a class="brand" href="#top" aria-label="回到顶部"><span class="seal" aria-hidden="true">游</span><span class="brand-text">黄昊轩<small>作品集</small></span></a>
+  <nav class="nav" aria-label="作品导航"><a href="#huazhong">画中洞天</a><a href="#astro">Astro Bot</a><a href="#card">卡牌</a><a href="#about">关于</a></nav>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-main">
+      <p class="eyebrow">黄昊轩 · 作品集 / 2026</p>
+      <h1 id="hero-title"><span>作品</span>展示</h1>
+      <p class="hero-lede">三款游戏，三个方向：空间解谜、Roguelike 与卡牌构筑。</p>
+      <div class="hero-meta"><span>数字媒体技术 · 游戏方向</span><span>2027 届本科</span><span>03 件作品 · 2024—2026</span></div>
+      <nav class="hero-index" aria-label="作品索引">
+        <a href="#huazhong"><span>01</span><strong>画中洞天</strong><em>空间解谜</em></a>
+        <a href="#astro"><span>02</span><strong>Astro Bot</strong><em>2D Roguelike</em></a>
+        <a href="#card"><span>03</span><strong>Roguelike 卡牌</strong><em>卡牌构筑</em></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="project" id="huazhong" aria-labelledby="huazhong-title">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="num">01</span><span class="kicker">精选项目</span><span class="rule" aria-hidden="true"></span></div>
+      <div class="title-row reveal"><div><h2 id="huazhong-title">画中洞天</h2><p class="subtitle">国风画境中的 2.5D 空间解谜 / 2026.07–09</p></div></div>
+
+      <div class="player reveal" data-player>
+        <video preload="none" playsinline poster="assets/huazhong-cover.jpg" aria-label="《画中洞天》游戏演示视频"><source src="videos/huazhong-dongtian-v2.mp4" type="video/mp4"></video>
+        <button class="player-overlay" type="button" aria-label="播放《画中洞天》演示视频，时长 6 分 28 秒"><span class="play-orb" aria-hidden="true"></span><span class="player-caption"><strong>播放演示</strong><span>06:28 · 点击开始</span></span></button>
+        <span class="player-tag" aria-hidden="true">实机演示 / 2026</span>
+      </div>
+
+      <div class="project-grid">
+        <div class="desc reveal">
+          <p><strong>《画中洞天》</strong>是一款使用 Unity 开发的 2.5D 空间解谜游戏。玩家操控小墨灵，在山水画构成的棋盘中移动、推动画片，并借助能够容纳内部世界的界箱改变运输路线，最终让缺失的画片回到对应位置。</p>
+          <p>我的工作以关卡策划为主，同时参与美术与程序落地：负责关卡逻辑设计，利用多重嵌套的空间逻辑构建关卡；参与 UI 设计与嵌套相关代码，并与程序、美术协作推进关卡落地。</p>
+          <a class="raw-link" href="videos/huazhong-dongtian-v2.mp4" target="_blank" rel="noopener">单独打开视频</a>
+        </div>
+        <dl class="facts reveal">
+          <div class="fact"><dt>类型</dt><dd>2.5D 空间解谜</dd></div><div class="fact"><dt>角色</dt><dd>关卡策划 / 副美 / 副程</dd></div><div class="fact"><dt>团队</dt><dd>4 人</dd></div><div class="fact"><dt>引擎</dt><dd>Unity / Wwise</dd></div><div class="fact"><dt>内容</dt><dd>嵌套关卡 / UI</dd></div><div class="fact"><dt>演示</dt><dd>06:28</dd></div>
+        </dl>
+      </div>
+
+      <div class="notes reveal">
+        <div class="note"><span class="note-num">01</span><div><h3>画片归位</h3><p>推动位置决定后续能否继续调整，玩家需要同时考虑角色站位与画片最终朝向。</p></div></div>
+        <div class="note"><span class="note-num">02</span><div><h3>界箱与嵌套</h3><p>可进入的界箱既是通道，也是运输工具；后期关卡把小匣放入大匣，形成空间层级。</p></div></div>
+        <div class="note"><span class="note-num">03</span><div><h3>机关组合</h3><p>朱印、墨流、阴阳门与四象转盘，从单规则教学逐步走向组合关卡。</p></div></div>
+      </div>
+
+      <div class="credits reveal"><span class="credits-label">Team Credits</span><span><b>郭骐</b>音效</span><span><b>罗浚峰</b>美术</span><span><b>韩阳煦</b>程序</span><span><b>黄昊轩</b>关卡策划 · 副美 · 副程</span></div>
+
+      <div class="gallery reveal">
+        <figure><div class="gallery-img"><img src="assets/huazhong-gate.jpg" alt="《画中洞天》朱印月门关卡，青灰围墙围合的棋盘与朱红色印章机关" loading="lazy" decoding="async"></div><figcaption><span>朱印月门 / 压力机关控制通路</span><span>01</span></figcaption></figure>
+        <figure><div class="gallery-img"><img src="assets/huazhong-box.jpg" alt="《画中洞天》四象台关卡，棋盘中央的界箱与四象转盘机关" loading="lazy" decoding="async"></div><figcaption><span>四象台 / 转盘改变界箱方向</span><span>02</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="project project--tint" id="astro" aria-labelledby="astro-title">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="num">02</span><span class="kicker">Roguelike 练习</span><span class="rule" aria-hidden="true"></span></div>
+      <div class="title-row reveal"><div><h2 id="astro-title">Astro Bot</h2><p class="subtitle">2D Roguelike 课程作业 / Unity / 2024.10–12</p></div></div>
+
+      <div class="player reveal" data-player>
+        <video preload="none" playsinline poster="assets/astro-bot.jpg" aria-label="Astro Bot 2D Roguelike 演示视频"><source src="videos/astro-bot.mp4" type="video/mp4"></video>
+        <button class="player-overlay" type="button" aria-label="播放 Astro Bot 2D Roguelike 演示视频，时长 3 分 09 秒"><span class="play-orb" aria-hidden="true"></span><span class="player-caption"><strong>播放演示</strong><span>03:09 · 点击开始</span></span></button>
+        <span class="player-tag" aria-hidden="true">开发记录 / 2024</span>
+      </div>
+
+      <div class="project-grid">
+        <div class="desc reveal">
+          <p><strong>《Astro Bot》</strong>是一款 2D Roguelike 课程作业，3 人团队。我在项目中担任主策、主美与副程：在 Unity 搭建白盒、随机选项与敌人对象池生成，并对敌人刷新波次与数量进行模拟，确保难度曲线处于合理区间。</p>
+          <p>视频记录了关卡与系统在 Unity 编辑器中的搭建、调试过程。项目为课程作业，非商业作品。</p>
+          <a class="raw-link" href="videos/astro-bot.mp4" target="_blank" rel="noopener">单独打开视频</a>
+        </div>
+        <dl class="facts reveal">
+          <div class="fact"><dt>类型</dt><dd>2D Roguelike</dd></div><div class="fact"><dt>角色</dt><dd>主策 / 主美 / 副程</dd></div><div class="fact"><dt>团队</dt><dd>3 人</dd></div><div class="fact"><dt>工具</dt><dd>Unity</dd></div><div class="fact"><dt>内容</dt><dd>白盒 / 难度模拟</dd></div><div class="fact"><dt>演示</dt><dd>03:09</dd></div>
+        </dl>
+      </div>
+
+      <div class="notes reveal">
+        <div class="note"><span class="note-num">01</span><div><h3>白盒与流程</h3><p>在 Unity 搭建 Roguelike 白盒，完成随机选项与关卡流程。</p></div></div>
+        <div class="note"><span class="note-num">02</span><div><h3>难度曲线</h3><p>模拟敌人刷新波次与数量，确保难度曲线在合理范围内。</p></div></div>
+        <div class="note"><span class="note-num">03</span><div><h3>对象池</h3><p>用对象池生成敌人，减少频繁实例化带来的性能开销。</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project" id="card" aria-labelledby="card-title">
+    <div class="wrap">
+      <div class="section-head reveal"><span class="num">03</span><span class="kicker">卡牌构筑</span><span class="rule" aria-hidden="true"></span></div>
+      <div class="title-row reveal"><div><h2 id="card-title">Roguelike 卡牌游戏</h2><p class="subtitle">类《杀戮尖塔》/ 主策 · 主程 / Unity / 2025.10–12</p></div></div>
+
+      <div class="player reveal" data-player>
+        <video preload="none" playsinline poster="assets/game-reel.jpg" aria-label="Roguelike 卡牌游戏实机演示视频"><source src="videos/game-reel-v2.mp4" type="video/mp4"></video>
+        <button class="player-overlay" type="button" aria-label="播放 Roguelike 卡牌游戏视频，时长 2 分 39 秒"><span class="play-orb" aria-hidden="true"></span><span class="player-caption"><strong>播放演示</strong><span>02:39 · 点击开始</span></span></button>
+        <span class="player-tag" aria-hidden="true">实机录像 / 2025</span>
+      </div>
+
+      <div class="project-grid">
+        <div class="desc reveal">
+          <p>以《杀戮尖塔》为参考的<strong>卡牌构筑 Roguelike</strong>，3 人团队。我在项目中担任主策与主程：搭建“探索—战斗—掉落—构筑”核心循环，设计 1 张大地图、32 张卡牌、24 种敌人与 10 个事件，形成 2 种可行流派。</p>
+          <p>同时作为客户端加入联网功能，支持多人同时进行游戏。视频为实机对战录像。</p>
+          <a class="raw-link" href="videos/game-reel-v2.mp4" target="_blank" rel="noopener">单独打开视频</a>
+        </div>
+        <dl class="facts reveal">
+          <div class="fact"><dt>类型</dt><dd>卡牌构筑 Roguelike</dd></div><div class="fact"><dt>角色</dt><dd>主策 / 主程</dd></div><div class="fact"><dt>团队</dt><dd>3 人</dd></div><div class="fact"><dt>内容</dt><dd>32 卡 / 24 敌人</dd></div><div class="fact"><dt>联网</dt><dd>多人联机</dd></div><div class="fact"><dt>演示</dt><dd>02:39</dd></div>
+        </dl>
+      </div>
+
+      <blockquote class="pull-quote reveal">把“探索—战斗—掉落—构筑”做成一条完整的循环，<em>是这支原型最核心的设计。</em></blockquote>
+    </div>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="reveal">
+          <div class="section-head"><span class="num">04</span><span class="kicker">自我评价 / 关于</span><span class="rule" aria-hidden="true"></span></div>
+          <h2 id="about-title">规则、空间，<br>以及玩家的那一下<span>“懂了”。</span></h2>
+          <p>数字媒体技术（游戏方向）本科在读，具备程序、美术与策划的复合背景；主导过 3 款游戏的核心玩法与关卡设计，擅长用可玩原型和试玩测试验证设计，希望参与从原型到落地的完整游戏开发。</p>
+          <p>我习惯先把想法做成能玩的原型，再通过试玩和复盘调整规则；也能在程序和美术之间做沟通与落地。这个页面收录其中 3 支演示。</p>
+        </div>
+        <aside class="about-aside reveal">
+          <ul class="about-list"><li><span>关注</span><span>规则 · 空间 · 玩家体验</span></li><li><span>工具</span><span>Unity · Wwise · 3dMax</span></li><li><span>项目</span><span>3 款游戏 / 3 支演示</span></li><li><span>联系</span><span>联系方式见简历</span></li></ul>
+          <p class="about-note">页面中的视频、截图与项目内容归项目团队所有，仅用于作品展示。</p>
+        </aside>
+      </div>
+      <footer class="footer"><span>© 2026 黄昊轩 · 作品集</span><span>作品展示 · 2024—2026</span><a href="#top">回到顶部 ↑</a></footer>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+  const header=document.getElementById('site-head'),progress=document.querySelector('.scroll-progress span'),players=Array.from(document.querySelectorAll('[data-player]'));
+  function onScroll(){const y=window.scrollY||document.documentElement.scrollTop,max=document.documentElement.scrollHeight-window.innerHeight;header.classList.toggle('is-scrolled',y>24);progress.style.transform='scaleX('+(max>0?Math.min(y/max,1):0)+')'}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  players.forEach(function(player){
+    const video=player.querySelector('video'),overlay=player.querySelector('.player-overlay'),caption=player.querySelector('.player-caption strong');
+    overlay.addEventListener('click',function(){
+      players.forEach(function(other){if(other!==player){const v=other.querySelector('video'),c=other.querySelector('.player-caption strong');if(!v.paused)v.pause();v.controls=false;other.classList.remove('is-playing','is-loading');if(c)c.textContent='播放演示'}});
+      player.classList.remove('is-error','is-playing');player.classList.add('is-loading');caption.textContent='正在载入…';video.controls=true;
+      const attempt=video.play();
+      if(attempt&&attempt.catch){attempt.catch(function(){player.classList.remove('is-loading');player.classList.add('is-error');caption.textContent='浏览器未能播放，请单独打开视频'})}
+    });
+    video.addEventListener('playing',function(){player.classList.remove('is-loading','is-error');player.classList.add('is-playing');caption.textContent='播放演示'});
+    video.addEventListener('ended',function(){video.controls=false;player.classList.remove('is-playing','is-loading');caption.textContent='播放演示';try{video.currentTime=0}catch(e){}});
+    video.addEventListener('error',function(){player.classList.remove('is-loading','is-playing');player.classList.add('is-error');caption.textContent='视频加载失败，请单独打开视频'});
+  });
+  const items=Array.from(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver'in window){const io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}})},{threshold:.08,rootMargin:'0px 0px -6% 0px'});items.forEach(function(i){io.observe(i)})}else{items.forEach(function(i){i.classList.add('is-visible')})}
+  const links=Array.from(document.querySelectorAll('.nav a[href^="#"]')),sections=links.map(function(l){return document.querySelector(l.getAttribute('href'))}).filter(Boolean);
+  if('IntersectionObserver'in window){const spy=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;links.forEach(function(l){l.classList.toggle('is-active',l.getAttribute('href')==='#'+e.target.id)})})},{rootMargin:'-42% 0px -52% 0px',threshold:0});sections.forEach(function(s){spy.observe(s)})}
+})();
+</script>
+</body>
+</html>
